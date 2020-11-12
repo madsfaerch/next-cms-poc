@@ -1,0 +1,108 @@
+{
+    "pages": [
+        {
+            "slug": "about",
+            "title": "About",
+            "layout": "primary",
+            "redirect": {
+                "destination": "/new-about",
+                "permanent": false
+            },
+            "components": [
+                {
+                    "id": "Link",
+                    "props": {
+                        "href": "/faq",
+                        "label": "Go to Frequent Asked Questions"
+                    }
+                },
+                {
+                    "id": "Box",
+                    "components": [
+                        {
+                            "id": "Link",
+                            "props": {
+                                "href": "/",
+                                "label": "Go to front page"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "mads",
+            "title": "Mads",
+            "layout": "primary",
+            "components": [
+                {
+                    "id": "RichText",
+                    "props": {
+                        "richText": "<h1>Mads</h1>"
+                    }
+                },
+                {
+                    "id": "Box",
+                    "components": [
+                        {
+                            "id": "Link",
+                            "props": {
+                                "href": "/",
+                                "label": "Go to front page"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "foo",
+            "title": "Foo",
+            "layout": "secondary",
+            "components": [
+                {
+                    "id": "Link",
+                    "props": {
+                        "href": "/about",
+                        "label": "foo to About page"
+                    }
+                }
+            ]
+        },
+        {
+            "slug": "faq",
+            "title": "Frequently Asked Questions",
+            "layout": "secondary",
+            "components": [
+                {
+                    "id": "Box",
+                    "props": {
+                        "size": "small"
+                    },
+                    "components": [
+                        {
+                            "id": "RichText",
+                            "props": {
+                                "richText": "<p>The easiest way to get started with Next.js is by using <code class='inline'>create-next-app</code>. This simple CLI tool enables you to quickly start building a new Next.js application, with everything set up for you. You can create a new app using the default Next.js template, or by using one of the <a href='https://github.com/vercel/next.js/tree/canary/examples' target='_blank' rel='noopener noreferrer'>official Next.js examples</a>. To get started, use the following command:</p>"
+                            }
+                        },
+                        {
+                            "id": "Link",
+                            "props": {
+                                "href": "/",
+                                "label": "Link til forsiden"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "Link",
+                    "props": {
+                        "href": "/about",
+                        "label": "Link to About page"
+                    }
+                }
+            ]
+        }
+    ]
+}

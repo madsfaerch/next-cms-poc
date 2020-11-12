@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.box {
+  background-color: #eee;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.box--small {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.primary-template {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.secondary-template {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
