@@ -28,5 +28,6 @@ export async function getStaticProps() {
     props: {
       pageLinks: pages.map(({ title, slug }) => ({ label: title, href: slug })),
     },
+    revalidate: 10,
   };
 }
