@@ -5,19 +5,25 @@ import { Secondary } from "../layouts/secondary";
 import { AppLink, Box, RichText } from "../components/components";
 import { useRouter } from "next/router";
 
-type LayoutType = "primary" | "secondary";
-
 const layoutMap = {
   primary: Primary,
   secondary: Secondary,
 };
 
+type LayoutType = keyof typeof layoutMap;
+
 function getLayout(page: PageProps) {
   return layoutMap[page.layout];
 }
 
+const componentMap = {
+  Link: AppLink,
+  Box,
+  RichText,
+};
+
 type ComponentModel = {
-  id: "Link" | "Box" | "RichText";
+  id: keyof typeof componentMap;
   props: any;
   components: ComponentModel[];
 };
@@ -29,12 +35,6 @@ function getComponents(models: ComponentModel[]) {
 
   return models.map(getComponent);
 }
-
-const componentMap = {
-  Link: AppLink,
-  Box,
-  RichText,
-};
 
 function getComponent(model: ComponentModel, index: number) {
   const Component = componentMap[model.id];
